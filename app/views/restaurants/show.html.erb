@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="text-center">
+    <h2><%= @restaurant.name %></h2>
+    <hr>
+    <h3><%= @restaurant.address %></h3>
+    <h3><%= @restaurant.category %></h3>
+    <ul class="list-unstyled">
+      <% @restaurant.reviews.each do |review| %>
+      <li>
+       Message : <%= review.content %> / Rating : <%= review.rating %>
+      </li>
+
+    <% end %>
+    </ul>
+    <hr>
+    <%= render 'reviews/form'%>
+    <hr>
+  </div>
+  <%= link_to "Back to the list", restaurants_path, class: "btn btn-primary" %>
+
+</div>
+
