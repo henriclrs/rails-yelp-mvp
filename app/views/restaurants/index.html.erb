@@ -3,6 +3,8 @@
 
   <% @restaurants.each do |restaurant|%>
   <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
-  <p>@reviews.restaurant</p>
+  <p><%= restaurant.name %></p>
+  <p><%= restaurant.address %></p>
+  <p><%= restaurant.phone_number %></p>
   <% end %>
 </div>
